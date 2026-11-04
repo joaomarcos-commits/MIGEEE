@@ -1,0 +1,112 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        #050505 0%,
+        #080000 45%,
+        #650000 100%
+    );
+
+    font-family: Arial, sans-serif;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 850px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 65px;
+    color: #ff2525;
+    margin-bottom: 45px;
+    text-shadow: 0 0 15px #a00000;
+    letter-spacing: 3px;
+}
+
+button {
+    background: #a00000;
+    color: white;
+    border: 2px solid #ff3030;
+    border-radius: 15px;
+
+    padding: 28px 45px;
+    font-size: 25px;
+    font-weight: bold;
+
+    cursor: pointer;
+    box-shadow: 0 0 25px #850000;
+
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e00000;
+    transform: scale(1.08);
+    box-shadow: 0 0 40px #ff0000;
+}
+
+button:active {
+    transform: scale(0.96);
+}
+
+#message {
+    width: 100%;
+    margin-top: 35px;
+}
+
+#message h2 {
+    font-size: clamp(25px, 5vw, 45px);
+    line-height: 1.5;
+    color: #ff3030;
+    text-shadow: 0 0 20px #ff0000;
+    animation: aparecer 1s ease;
+}
+
+.aura {
+    font-size: clamp(30px, 5vw, 45px);
+    color: #ffdddd;
+    font-weight: bold;
+    margin-top: 30px;
+    text-shadow: 0 0 20px red;
+    animation: aparecer 1.5s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 42px;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 22px;
+    }
+}
